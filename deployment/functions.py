@@ -9,11 +9,11 @@ from tensorflow.keras.preprocessing import image
 from sklearn.decomposition import PCA
 import pickle
 
-centroids = pd.read_csv('deployment/centroids.csv')
+centroids = pd.read_csv('centroids.csv')
 centroids = np.array(centroids)
 base_model = VGG16(weights='imagenet', include_top=False)
 model = Model(inputs=base_model.input, outputs=base_model.layers[-1].output)
-with open('pca_model.pkl', 'rb') as f:
+with open('../pca_model.pkl', 'rb') as f:
     pca = pickle.load(f)
 
 def preprocess_image(img_raw, target_size): 
