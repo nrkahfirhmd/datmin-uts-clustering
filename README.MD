@@ -11,3 +11,5 @@ Repository ini merupakan mini project untuk menyelesaikan UTS mata kuliah Data M
 ### https://image-segmentation-clustering.streamlit.app/
 
 ## Preview
+
+![](/public/preview.gif)
